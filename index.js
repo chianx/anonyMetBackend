@@ -10,14 +10,14 @@ const server = http.createServer(app);
 const io = new Server(server);
 
 const users = [{}];
-const roomCount = 4;
-let rooms = [];
+const roomCount = 5;
+let rooms = [0, 0, 0, 0, 0];
 
 function alotRoom() {
     let alotted = -1;
     let roomAvail = [];
     for(var i = 0; i<roomCount; i++) {
-        if(rooms[i] < 2) roomAvail.push(i);
+        if(rooms[i] < 4) roomAvail.push(i);
     }
     let numOfRoomAvaial =  roomAvail.length;
     if(numOfRoomAvaial === 0) return alotted;
@@ -35,7 +35,7 @@ function createRooms() {
 const port = process.env.PORT || 4500;
 server.listen(port, () => {
     console.log("Server is running on http://localhost:"+port);
-    createRooms();
+    // createRooms();
 })
 
 io.on("connection", (socket) => {
