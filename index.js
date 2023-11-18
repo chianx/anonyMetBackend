@@ -34,7 +34,7 @@ function createRooms() {
     }
 }
 
-const port = process.env.PORT || 4500;
+const port = process.env.PORT;
 server.listen(port, () => {
     console.log("Server is running on http://localhost:"+port);
     // createRooms();
