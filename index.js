@@ -1,5 +1,4 @@
 import express from 'express';
-const serverless = require('serverless-http');
 import { Server } from "socket.io";
 import cors from "cors";
 import http from 'http';
