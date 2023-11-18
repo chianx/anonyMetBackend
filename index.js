@@ -19,6 +19,8 @@ function alotRoom() {
     for(var i = 0; i<roomCount; i++) {
         if(rooms[i] < 4) roomAvail.push(i);
     }
+    console.log("room avail ", roomAvail);
+    console.log("rooms = ", rooms); 
     let numOfRoomAvaial =  roomAvail.length;
     if(numOfRoomAvaial === 0) return alotted;
     var randNum = Math.floor(Math.random()*numOfRoomAvaial);
