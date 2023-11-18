@@ -32,7 +32,7 @@ function createRooms() {
     }
 }
 
-const port = 4500;
+const port = process.env.PORT || 4500;
 server.listen(port, () => {
     console.log("Server is running on http://localhost:"+port);
     createRooms();
